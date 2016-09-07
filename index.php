@@ -1,7 +1,5 @@
 <?php
 
-define ('_APP', dirname(__FILE__) . '/app');
-
 require 'vendor/autoload.php';
 
 $app = new \Slim\App([
@@ -11,9 +9,6 @@ $app = new \Slim\App([
     ]
 ]);
 
-require_once _APP . '/config/database.php';
-require_once _APP . '/helpers/appHelpers.php';
-require_once _APP . '/models/appModels.php';
-require_once _APP . '/routes.php';
+require_once 'app/routes.php';
 
 $app->run();

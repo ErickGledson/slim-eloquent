@@ -1,7 +1,9 @@
 <?php
 
-require_once _APP . '/controllers/HomeController.php';
+namespace App\Route;
 
-$app->get('/', 'HomeController:index');
+$c = new \App\Database\Capsule;
+
+$app->get('/', 'App\Controller\HomeController:index');
 
 ?>
